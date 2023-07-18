@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Portfolio | Moritz Schüßler">
+	<main>
+
+	</main>
+</Layout>
+
+<style is:global>
+	@font-face {
+		font-family: 'Satoshi';
+		src: url('/fonts/satoshi/Satoshi-Variable.woff2') format('woff2'),
+		url('/fonts/satoshi/Satoshi-Variable.woff') format('woff'),
+		url('/fonts/satoshi/Satoshi-Variable.ttf') format('truetype');
+		font-weight: 400;
+		font-display: swap;
+		font-style: normal;
+	}
+
+	:root {
+		--darkColor: hsl(0, 0%, 5%);
+		--lightColor: hsl(0, 0%, 95%);
+		--accentColor: hsl(39, 87% ,59%);
+
+		font-family: 'Satoshi', sans-serif;
+	}
+
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+
+	html {
+		color-scheme: dark;
+	}
+
+	body {
+		margin: 0;
+		overscroll-behavior: none;
+	}
+</style>
