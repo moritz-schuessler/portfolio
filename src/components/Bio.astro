@@ -1,0 +1,22 @@
+---
+const response = await fetch('https://api.github.com/users/moritz-schuessler');
+const { bio } = await response.json();
+
+const bioSplit = bio.split('\r\n');
+---
+
+<p>
+    {
+        bioSplit.map((line) => (
+        <span>{line}<br /></span>
+        ))
+    }
+</p>
+<style>
+    p {
+        font-size: 1.5rem;
+    }
+
+</style>
+
+

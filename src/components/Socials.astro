@@ -1,0 +1,50 @@
+---
+import { Icon } from 'astro-icon'
+
+const socials = [
+    {name: 'E-Mail', href: 'https://github.com/moritz-schuessler', icon: 'mdi:mail-ru'},
+    {name: 'LinkedIn', href: 'https://github.com/moritz-schuessler', icon: 'mdi:linkedin'},
+    {name: 'GitHub', href: 'https://github.com/moritz-schuessler', icon: 'mdi:github'},
+]
+---
+
+<section>
+    {
+        socials.map(({name, href, icon }) => {
+            return (
+                    <a href={href} target='_blank'>
+                        <Icon name={icon} />
+                        <span>{name}</span>
+                    </a>
+            )
+        })
+    }
+</section>
+
+<style>
+    a {
+        all: unset;
+
+        padding: 10px;
+
+        display: flex;
+        align-items: center;
+
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    span {
+        padding: 0 1rem;
+        font-size: 2rem;
+    }
+
+    [astro-icon] {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    a:hover {
+        color: var(--accentColor);
+    }
+</style>
