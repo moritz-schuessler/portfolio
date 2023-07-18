@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import About from "../components/About.astro";
 ---
 
 <Layout title="Portfolio | Moritz Schüßler">
 	<main>
+		<About width="30dvw"/>
 
 	</main>
 </Layout>
@@ -11,10 +13,10 @@ import Layout from "../layouts/Layout.astro";
 <style is:global>
 	@font-face {
 		font-family: 'Satoshi';
-		src: url('/fonts/satoshi/Satoshi-Variable.woff2') format('woff2'),
-		url('/fonts/satoshi/Satoshi-Variable.woff') format('woff'),
-		url('/fonts/satoshi/Satoshi-Variable.ttf') format('truetype');
-		font-weight: 400;
+		src: url('/fonts/Satoshi/Satoshi-Variable.woff2') format('woff2'),
+		url('/fonts/Satoshi/Satoshi-Variable.woff') format('woff'),
+		url('/fonts/Satoshi/Satoshi-Variable.ttf') format('truetype');
+		font-weight: 300 900;
 		font-display: swap;
 		font-style: normal;
 	}
