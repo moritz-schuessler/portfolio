@@ -1,0 +1,43 @@
+---
+import Bio from "./Bio.astro";
+import Socials from "./Socials.astro";
+
+const {width} = Astro.props;
+---
+
+<section>
+    <div class="personal-infos">
+        <h1>
+            Moritz Schüßler
+        </h1>
+        <Bio />
+    </div>
+    <Socials />
+</section>
+
+<style define:vars={{width}}>
+    section {
+        height: 100dvh;
+        width: var(--width);
+
+        padding: 25px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: -1px;
+    }
+
+    .personal-infos {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+</style>
