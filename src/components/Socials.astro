@@ -13,8 +13,8 @@ const socials = [
         socials.map(({name, href, icon }) => {
             return (
                     <a href={href} target='_blank'>
-                        <Icon name={icon} />
-                        <span>{name}</span>
+                        <span class="icon"><Icon name={icon} /></span>
+                        <span class="text">{name}</span>
                     </a>
             )
         })
@@ -22,10 +22,15 @@ const socials = [
 </section>
 
 <style>
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
     a {
         all: unset;
 
-        padding: 10px;
+        padding: 10px 0;
 
         display: flex;
         align-items: center;
@@ -34,17 +39,46 @@ const socials = [
         cursor: pointer;
     }
 
-    span {
-        padding: 0 1rem;
-        font-size: 2rem;
-    }
-
     [astro-icon] {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2rem;
+        height: 2rem;
+
     }
 
     a:hover {
         color: hsl(var(--accentColor));
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+    }
+
+    @media (max-width: 1000px) {
+        section {
+            flex-direction: row;
+            justify-content: left;
+        }
+
+        a {
+            margin-right: 2rem
+        }
+
+        [astro-icon] {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    @media (max-width: 750px) {
+        section {
+            justify-content: space-between;
+            margin-right: 0;
+        }
     }
 </style>
