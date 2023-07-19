@@ -27,7 +27,7 @@ import Socials from "./Socials.astro";
 
     h1 {
         margin: 0;
-        font-size: 3rem;
+        font-size: clamp(2.4rem, 100vw - 900px, 3rem);
         font-weight: 600;
         letter-spacing: -1px;
     }
@@ -35,5 +35,11 @@ import Socials from "./Socials.astro";
     .personal-infos {
         display: flex;
         flex-direction: column;
+    }
+
+    @media (max-width: 768px) {
+        section {
+            height: auto;
+        }
     }
 </style>
