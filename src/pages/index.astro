@@ -2,9 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
-
-const widthAbout = "30dvw";
-const widthProjects = "70dvw";
 ---
 
 <Layout title="Portfolio | Moritz Schüßler">
@@ -30,8 +27,8 @@ const widthProjects = "70dvw";
 		--lightColor: 0, 0%, 95%;
 		--accentColor: 39, 87% ,59%;
 
-		--aboutWidth: ${widthAbout};
-		--projectsWidth: ${widthProjects};
+		--aboutWidth: 30dvw;
+		--projectsWidth: 70dvw;
 
 		font-family: 'Satoshi', sans-serif;
 	}
@@ -48,6 +45,13 @@ const widthProjects = "70dvw";
 		margin: 0;
 		overscroll-behavior: none;
 	}
+
+	@media (max-width: 1000px) {
+		:root {
+			--aboutWidth: 100dvw;
+			--projectsWidth: 100dvw;
+		}
+	}
 </style>
 
 <style>
@@ -57,12 +61,7 @@ const widthProjects = "70dvw";
 		width: 100dvw;
 	}
 
-	@media (max-width: 768px) {
-		:root {
-			--aboutWidth: 100dvw;
-			--projectsWidth: 100dvw;
-		}
-
+	@media (max-width: 1000px) {
 		main {
 			flex-direction: column;
 			height: auto;
