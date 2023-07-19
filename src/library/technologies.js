@@ -5,7 +5,7 @@ const technologiesArray = [
     {id: 4, name: 'javascript', icon: 'javascript'},
     {id: 5, name: 'react', icon: 'react'},
     {id: 6, name: 'next', icon: 'nextjs'},
-    {id: 7, name: 'svelte', icon: 'react'},
+    {id: 7, name: 'svelte', icon: 'svelte'},
     {id: 8, name: 'astro', icon: 'astro'},
     {id: 9, name: 'gsap', icon: 'gsap'},
 ]
