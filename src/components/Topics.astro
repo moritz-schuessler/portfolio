@@ -1,0 +1,32 @@
+---
+import {Icon} from 'astro-icon'
+
+import technologies from "../library/technologies";
+
+const {topics} = Astro.props
+const projectTechnologies = technologies(topics)
+console.log(projectTechnologies)
+---
+<div>
+    {
+        projectTechnologies.map(({name, icon}) => {
+            {return icon ? <Icon name={icon} /> : name}
+        })
+    }
+</div>
+
+<style>
+    div {
+        display: flex;
+        align-items: center;
+    }
+
+    [astro-icon] {
+        width: 2rem;
+        height: 2rem;
+
+        margin-right: 1rem;
+        filter: grayscale(1);
+    }
+</style>
+
