@@ -22,6 +22,11 @@ const socials = [
 </section>
 
 <style>
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
     a {
         all: unset;
 
@@ -46,5 +51,21 @@ const socials = [
 
     a:hover {
         color: hsl(var(--accentColor));
+    }
+
+    @media (max-width: 768px) {
+        section {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        a {
+            padding: 0;
+        }
+
+        [astro-icon] {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 </style>
