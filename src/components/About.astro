@@ -1,8 +1,6 @@
 ---
 import Bio from "./Bio.astro";
 import Socials from "./Socials.astro";
-
-const {width} = Astro.props;
 ---
 
 <section>
@@ -15,10 +13,10 @@ const {width} = Astro.props;
     <Socials />
 </section>
 
-<style define:vars={{width}}>
+<style>
     section {
         height: 100dvh;
-        width: var(--width);
+        width: var(--aboutWidth);
 
         padding: 25px;
 
@@ -38,6 +36,4 @@ const {width} = Astro.props;
         display: flex;
         flex-direction: column;
     }
-
-
 </style>

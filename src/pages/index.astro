@@ -2,16 +2,19 @@
 import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
+
+const widthAbout = "30dvw";
+const widthProjects = "70dvw";
 ---
 
 <Layout title="Portfolio | Moritz Schüßler">
 	<main>
-		<About width="30dvw"/>
-		<Projects width="70dvw" />
+		<About />
+		<Projects />
 	</main>
 </Layout>
 
-<style is:global>
+<style is:global >
 	@font-face {
 		font-family: 'Satoshi';
 		src: url('/fonts/Satoshi/Satoshi-Variable.woff2') format('woff2'),
@@ -26,6 +29,9 @@ import Projects from "../components/Projects.astro";
 		--darkColor: 0, 0%, 5%;
 		--lightColor: 0, 0%, 95%;
 		--accentColor: 39, 87% ,59%;
+
+		--aboutWidth: ${widthAbout};
+		--projectsWidth: ${widthProjects};
 
 		font-family: 'Satoshi', sans-serif;
 	}
@@ -49,5 +55,17 @@ import Projects from "../components/Projects.astro";
 		display: flex;
 		height: 100dvh;
 		width: 100dvw;
+	}
+
+	@media (max-width: 768px) {
+		:root {
+			--aboutWidth: 100dvw;
+			--projectsWidth: 100dvw;
+		}
+
+		main {
+			flex-direction: column;
+			height: auto;
+		}
 	}
 </style>
