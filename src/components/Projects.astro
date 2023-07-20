@@ -16,6 +16,7 @@ const repositories = await response.json();
 <style>
     section {
         width: var(--projectsWidth);
+        height: fit-content;
         padding: 25px;
         display: grid;
         grid-auto-flow: row dense;
@@ -23,17 +24,19 @@ const repositories = await response.json();
         align-content: start;
         gap: 10px;
         overflow: scroll;
+
     }
 
     @media (max-width: 1300px) {
         section {
             grid-template-columns: 1fr;
+            height: fit-content;
         }
     }
 
     @media (max-width: 1000px) {
         section {
-            padding-block: 0 25rem;
+            padding-top: 0;
             grid-template-columns: 1fr;
         }
     }
