@@ -9,6 +9,7 @@ const technologiesArray = [
     {id: 8, name: 'svelte', icon: 'svelte'},
     {id: 9, name: 'astro', icon: 'astro'},
     {id: 11, name: 'react-query', icon: 'react-query'},
+    {id: 12, name: 'gsap', icon: 'gsap'},
 ]
 
 const technologies = (topics) => {
